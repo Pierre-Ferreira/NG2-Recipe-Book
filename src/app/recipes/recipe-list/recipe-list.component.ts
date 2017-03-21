@@ -8,12 +8,12 @@ import { Recipe } from '../recipe';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [];
   @Output() recipeSelected = new EventEmitter<Recipe>();
-  recipeBoom = new Recipe('Dummies','Dummy',' ')
+  recipeDummy = new Recipe('Dummies','Dummy',' ')
   constructor() { }
 
   ngOnInit() {
   }
   onSelected(recipe: Recipe) {
-    this.recipeSelected.emit(recipe);
+    this.recipeSelected.emit(this.recipeDummy); 
   }
 }
